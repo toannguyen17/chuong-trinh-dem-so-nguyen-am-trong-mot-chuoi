@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+	<p>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</p>
+	<button onclick="enterInput()">Nhập vào chuỗi số</button>
+	<script type="text/javascript">
+		function enterInput() {
+			let enter = prompt('Nhập vào chuỗi số nguyên.');
+			if (enter !== null) {
+				let list = enter.split(' ');
+				let soAm = '';
+				for (let i = 0; i < list.length; i++) {
+					let data = list[i];
+					if (!isNaN(data) && data < 0) {
+						soAm += data+', ';
+					}
+				}
+				if(soAm.length > 0){
+					alert('Danh sách số âm trong dãy số nhập vào:\n' + soAm);
+				}else{
+					alert('Không có số âm trong dãy số');
+				}
+			}
+		}
+	</script>
+</body>
+</html>
